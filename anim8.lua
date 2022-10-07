@@ -248,5 +248,11 @@ menu.action(menu.my_root(), "Stop everything", {"stopanim"}, "", function()
     stop()
 end)
 
+async_http.init("pastebin.com", "/raw/nrMdhHwE", function(result)
+    menu.hyperlink(menu.my_root(), "Join discord", result, "")
+end)
+async_http.dispatch()
+
+
 
 util.keep_running()
